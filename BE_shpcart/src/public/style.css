@@ -1,0 +1,15 @@
+.create-order-container {
+    position: relative;
+}
+
+.table-responsive {
+    border: 1px solid;
+    position: absolute;
+    top: 50px;
+    left: 40%;
+    padding: 20px;
+    box-shadow: 0px 2px 12px 6px rgb(161, 161, 161);
+}
+.table-responsive > h3 {
+    text-align: center;
+}

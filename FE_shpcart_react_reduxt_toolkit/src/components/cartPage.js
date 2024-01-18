@@ -21,9 +21,17 @@ const CartPage = () => {
   }, [cart, dispatch])
 
   const handleCheckoutPayMomo = () => {
-    axios.post("http://localhost:1400/api/v2/payment/momo", {amount: totalPrice}).then(res => {
+    axios.post("http://localhost:1400/api/v2/payment/momo", { amount: totalPrice }).then(res => {
         window.location.replace(`${res.data.DT.url}`)
     })
+  }
+  
+  const handleCheckoutVnPay = () => {
+    window.location.replace(`http://localhost:1400/api/v2/payment/getVnpay?amount=${totalPrice}`)
+  }
+
+  const handleCheckoutPayPal = () => {
+    
   }
 
   return (
@@ -141,10 +149,24 @@ const CartPage = () => {
 
                   <button
                     type="button"
-                    className="btn btn-primary btn-lg btn-block"
+                    className="btn btn-danger btn-lg btn-block"
                     onClick={() => handleCheckoutPayMomo()}
                   >
-                    Go to checkout
+                    momo
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-success btn-lg btn-block"
+                    onClick={() => handleCheckoutVnPay()}
+                  >
+                    VnPay
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-primary btn-lg btn-block"
+                    onClick={() => handleCheckoutPayPal()}
+                  >
+                    paypal
                   </button>
                 </div>
               </div>

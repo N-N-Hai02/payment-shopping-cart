@@ -10,3 +10,10 @@
     - so the: 9704 0000 0000 0018
     - han ghi the: 03/07
     - OTP: OTP
+
+# Account test Vnpay API
+    Ngân hàng: NCB
+    Số thẻ: 9704198526191432198
+    Tên chủ thẻ:NGUYEN VAN A
+    Ngày phát hành:07/15
+    Mật khẩu OTP:123456
